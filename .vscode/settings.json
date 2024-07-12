@@ -1,8 +1,0 @@
-{
-    "python.REPL.enableREPLSmartSend": false,
-    "python.testing.pytestArgs": [
-        "system_programming_module"
-    ],
-    "python.testing.unittestEnabled": false,
-    "python.testing.pytestEnabled": true
-}

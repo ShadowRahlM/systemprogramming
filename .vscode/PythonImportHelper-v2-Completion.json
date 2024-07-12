@@ -1,0 +1,209 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "NOT",
+        "kind": 2,
+        "importPath": "bits",
+        "description": "bits",
+        "peekOfCode": "def NOT(value):\n    return ~value\ndef AND(val1,val2):\n    return val1 & val2\ndef OR(val1, val2):\n    return val1 | val2\ndef XOR(val1,val2):\n    return val1^val2\ndef shiftleft(val, num):\n    return val << num",
+        "detail": "bits",
+        "documentation": {}
+    },
+    {
+        "label": "AND",
+        "kind": 2,
+        "importPath": "bits",
+        "description": "bits",
+        "peekOfCode": "def AND(val1,val2):\n    return val1 & val2\ndef OR(val1, val2):\n    return val1 | val2\ndef XOR(val1,val2):\n    return val1^val2\ndef shiftleft(val, num):\n    return val << num\ndef shiftright(val, num):\n    return val >> num",
+        "detail": "bits",
+        "documentation": {}
+    },
+    {
+        "label": "OR",
+        "kind": 2,
+        "importPath": "bits",
+        "description": "bits",
+        "peekOfCode": "def OR(val1, val2):\n    return val1 | val2\ndef XOR(val1,val2):\n    return val1^val2\ndef shiftleft(val, num):\n    return val << num\ndef shiftright(val, num):\n    return val >> num\ndef bit(val,idx):# all 0 except idx\n    mask = 1 << idx",
+        "detail": "bits",
+        "documentation": {}
+    },
+    {
+        "label": "XOR",
+        "kind": 2,
+        "importPath": "bits",
+        "description": "bits",
+        "peekOfCode": "def XOR(val1,val2):\n    return val1^val2\ndef shiftleft(val, num):\n    return val << num\ndef shiftright(val, num):\n    return val >> num\ndef bit(val,idx):# all 0 except idx\n    mask = 1 << idx\n    return bool(val & 1)\ndef setbit(val,idx):# all 0 except idx",
+        "detail": "bits",
+        "documentation": {}
+    },
+    {
+        "label": "shiftleft",
+        "kind": 2,
+        "importPath": "bits",
+        "description": "bits",
+        "peekOfCode": "def shiftleft(val, num):\n    return val << num\ndef shiftright(val, num):\n    return val >> num\ndef bit(val,idx):# all 0 except idx\n    mask = 1 << idx\n    return bool(val & 1)\ndef setbit(val,idx):# all 0 except idx\n    mask = 1 << idx\n    return val | mask",
+        "detail": "bits",
+        "documentation": {}
+    },
+    {
+        "label": "shiftright",
+        "kind": 2,
+        "importPath": "bits",
+        "description": "bits",
+        "peekOfCode": "def shiftright(val, num):\n    return val >> num\ndef bit(val,idx):# all 0 except idx\n    mask = 1 << idx\n    return bool(val & 1)\ndef setbit(val,idx):# all 0 except idx\n    mask = 1 << idx\n    return val | mask\ndef zerobit(val, idx):# all 1 except idx\n    mask = ~(1 << idx)",
+        "detail": "bits",
+        "documentation": {}
+    },
+    {
+        "label": "bit",
+        "kind": 2,
+        "importPath": "bits",
+        "description": "bits",
+        "peekOfCode": "def bit(val,idx):# all 0 except idx\n    mask = 1 << idx\n    return bool(val & 1)\ndef setbit(val,idx):# all 0 except idx\n    mask = 1 << idx\n    return val | mask\ndef zerobit(val, idx):# all 1 except idx\n    mask = ~(1 << idx)\n    return val & mask\ndef listbits(val):",
+        "detail": "bits",
+        "documentation": {}
+    },
+    {
+        "label": "setbit",
+        "kind": 2,
+        "importPath": "bits",
+        "description": "bits",
+        "peekOfCode": "def setbit(val,idx):# all 0 except idx\n    mask = 1 << idx\n    return val | mask\ndef zerobit(val, idx):# all 1 except idx\n    mask = ~(1 << idx)\n    return val & mask\ndef listbits(val):\n    num = len(bin(val)) - 2\n    result = []\n    for n in range(num):",
+        "detail": "bits",
+        "documentation": {}
+    },
+    {
+        "label": "zerobit",
+        "kind": 2,
+        "importPath": "bits",
+        "description": "bits",
+        "peekOfCode": "def zerobit(val, idx):# all 1 except idx\n    mask = ~(1 << idx)\n    return val & mask\ndef listbits(val):\n    num = len(bin(val)) - 2\n    result = []\n    for n in range(num):\n        result.append( 1 if bit(val,n) else 0 )\n    return list( reversed(result) )",
+        "detail": "bits",
+        "documentation": {}
+    },
+    {
+        "label": "listbits",
+        "kind": 2,
+        "importPath": "bits",
+        "description": "bits",
+        "peekOfCode": "def listbits(val):\n    num = len(bin(val)) - 2\n    result = []\n    for n in range(num):\n        result.append( 1 if bit(val,n) else 0 )\n    return list( reversed(result) )",
+        "detail": "bits",
+        "documentation": {}
+    },
+    {
+        "label": "BitMask",
+        "kind": 6,
+        "importPath": "bitsmask",
+        "description": "bitsmask",
+        "peekOfCode": "class BitMask(int):\n    ''' Class that represents a bit mask.\nIt has methods representing all\nthe bitwise operations plus some\nadditional features. The methods\nreturn a new BitMask object or\na boolean result. See the bits\nmodule for more on the operations\nprovided.\n'''",
+        "detail": "bitsmask",
+        "documentation": {}
+    },
+    {
+        "label": "change_and_return",
+        "kind": 2,
+        "importPath": "change",
+        "description": "change",
+        "peekOfCode": "def change_and_return(dir):\n    if not os.path.isdir(dir):\n        print('invalid folder provide a real one')\n    else:\n        dir1 = os.chdir(dir)\n        result =  os.listdir(dir1)\n    # for root,dirs in os.walk(result):\n        system = os.system(f'ls -rRa{result}')\n    return system\nprint(change_and_return(dir))",
+        "detail": "change",
+        "documentation": {}
+    },
+    {
+        "label": "dir",
+        "kind": 5,
+        "importPath": "change",
+        "description": "change",
+        "peekOfCode": "dir = input('enter directory: ').lower()\ndef change_and_return(dir):\n    if not os.path.isdir(dir):\n        print('invalid folder provide a real one')\n    else:\n        dir1 = os.chdir(dir)\n        result =  os.listdir(dir1)\n    # for root,dirs in os.walk(result):\n        system = os.system(f'ls -rRa{result}')\n    return system",
+        "detail": "change",
+        "documentation": {}
+    },
+    {
+        "label": "MyClass",
+        "kind": 6,
+        "importPath": "class_decoy",
+        "description": "class_decoy",
+        "peekOfCode": "class MyClass(object):\n    instance_count = 0\n    def __init__(self, value):\n        self.__value = value\n        MyClass.instance_count += 1 \n        print(\"instance No {} created\".format(MyClass.instance_count))\n        # print('instance No,{MyClass.instance_count},created')\n    def aMethod(self, aValue):\n        self.__value *= aValue\n    def __str__(self):",
+        "detail": "class_decoy",
+        "documentation": {}
+    },
+    {
+        "label": "one",
+        "kind": 5,
+        "importPath": "class_decoy",
+        "description": "class_decoy",
+        "peekOfCode": "one = MyClass(10)\none.instance_count\ntwo = MyClass(50)\ntwo.instance_count\nMyClass.aMethod(one,80)\nprint(two,one)",
+        "detail": "class_decoy",
+        "documentation": {}
+    },
+    {
+        "label": "two",
+        "kind": 5,
+        "importPath": "class_decoy",
+        "description": "class_decoy",
+        "peekOfCode": "two = MyClass(50)\ntwo.instance_count\nMyClass.aMethod(one,80)\nprint(two,one)",
+        "detail": "class_decoy",
+        "documentation": {}
+    },
+    {
+        "label": "RotationCounter",
+        "kind": 6,
+        "importPath": "exe101_",
+        "description": "exe101_",
+        "peekOfCode": "class RotationCounter:\n    def __init__(self, start=0):\n        self.counter = 0\n    def increment(self):\n        self.counter += 1\n        if self.counter > 9:\n            self.counter = 0\n        return self.counter\n    def reset(self, value=0):\n        current_value = self.counter",
+        "detail": "exe101_",
+        "documentation": {}
+    },
+    {
+        "label": "os_exc",
+        "kind": 2,
+        "importPath": "exe101_",
+        "description": "exe101_",
+        "peekOfCode": "def os_exc(command):\n    if not os.system(command):\n        return False\n    else:\n        return sp.run(command)\ncommand = input('enter command here[ls,p,uname,df]: ')\ndef run():\n    while not command == 'exit':\n        if command.lower() == 'ls':\n            os_exc('ls')",
+        "detail": "exe101_",
+        "documentation": {}
+    },
+    {
+        "label": "run",
+        "kind": 2,
+        "importPath": "exe101_",
+        "description": "exe101_",
+        "peekOfCode": "def run():\n    while not command == 'exit':\n        if command.lower() == 'ls':\n            os_exc('ls')\n            break\n        elif command.lower() == 'p':\n            os_exc('pwd')\n            break\n        elif command.lower() == 'df':\n            os_exc('df -h ')",
+        "detail": "exe101_",
+        "documentation": {}
+    },
+    {
+        "label": "area",
+        "kind": 2,
+        "importPath": "exe101_",
+        "description": "exe101_",
+        "peekOfCode": "def area(b, h): return 0.5 * b * h\nprint(area(8, 55))\nclass RotationCounter:\n    def __init__(self, start=0):\n        self.counter = 0\n    def increment(self):\n        self.counter += 1\n        if self.counter > 9:\n            self.counter = 0\n        return self.counter",
+        "detail": "exe101_",
+        "documentation": {}
+    },
+    {
+        "label": "command",
+        "kind": 5,
+        "importPath": "exe101_",
+        "description": "exe101_",
+        "peekOfCode": "command = input('enter command here[ls,p,uname,df]: ')\ndef run():\n    while not command == 'exit':\n        if command.lower() == 'ls':\n            os_exc('ls')\n            break\n        elif command.lower() == 'p':\n            os_exc('pwd')\n            break\n        elif command.lower() == 'df':",
+        "detail": "exe101_",
+        "documentation": {}
+    }
+]
