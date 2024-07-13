@@ -1,11 +1,25 @@
-#! /usr/bin/python3.12
-
 import configparser as cp 
 
-
+# Initialize ConfigParser
 conf = cp.ConfigParser()
-conf['DEFAULT'] = {'lending_period' : 0, 'max_value' : 0}
-conf['Fred'] = {'max_value' : 200} # Fred's a bit rough with things!
-conf['Anne'] = {'lending_period' : 30} # She is a bit forgetful sometimes
+
+# Set default values for all sections
+conf['DEFAULT'] = {
+    'lending_period': '0',  # Default lending period
+    'max_value': '0'         # Default maximum value
+}
+
+# Custom settings for Fred and Anne
+conf['Fred'] = {
+    'max_value': '200'  # Fred's maximum value
+}
+
+conf['Anne'] = {
+    'lending_period': '30'  # Anne's lending period
+}
+
+# Write configuration to file
 with open('toolhire.ini', 'w') as toolhire:
     conf.write(toolhire)
+
+print("Configuration file 'toolhire.ini' has been successfully created.")
