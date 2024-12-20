@@ -4,5 +4,6 @@
         "system_programming_module"
     ],
     "python.testing.unittestEnabled": false,
-    "python.testing.pytestEnabled": true
+    "python.testing.pytestEnabled": true,
+    "svn.ignoreMissingSvnWarning": true
 }
