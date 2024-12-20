@@ -7,7 +7,6 @@ import resource
 dir = os.getcwd()
 list_dir = os.listdir('/')
 
-
 for file in list_dir:
     print(file) 
     
