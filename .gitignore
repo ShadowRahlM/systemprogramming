@@ -1,0 +1,51 @@
+# Exclude .vscode directory
+.vscode/
+
+# Exclude Python bytecode files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Exclude virtual environment directories
+venv/
+env/
+ENV/
+.venv/
+.ENV/
+
+# Exclude system files
+.DS_Store
+Thumbs.db
+
+# Exclude log files
+*.log
+
+# Exclude temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Exclude compiled files
+*.o
+*.obj
+*.dll
+*.exe
+*.out
+*.class
+
+# Exclude package files
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Exclude IDE project files
+.idea/
+*.iml
+*.ipr
+*.iws
