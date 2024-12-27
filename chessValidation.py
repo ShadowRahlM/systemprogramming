@@ -1,5 +1,8 @@
 #! /usr/bin/env python3.13
 
+import pprint as p 
+
+
 chess_moves = {
     'pawn': {
         'white': [
@@ -42,17 +45,24 @@ chess_moves = {
     ]
 }
 
-print(chess_moves)
+p.pprint(chess_moves)
 
-def valid_move(chess_board, valid_m):
-    for k, v in chess_board.items():
-        move = input(f"Enter move for {k}: ")
-        if not move in v.get(valid_m, []):
-            print(f"Move is invalid: {move}")
-            return False
-        else:
-            print(f"Moved to: {move}")
-    return True
+def valid_move(chess_board, piece, color=None):
+    moves = chess_board.get(piece, {})
+    if isinstance(moves, dict):
+        moves = moves.get(color, [])
+    move = input(f"Enter move for {piece}: ")
+    if move not in moves:
+        print(f"Move is invalid: {move}")
+        return False
+    else:
+        print(f"Moved to: {move}")
+        return True
+
+move = valid_move(chess_moves, 'pawn', 'white')
+print(f"Valid move: {move}")
+
+
 
 
 def add_to_inventory(inventory, added_items):
