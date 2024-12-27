@@ -1,7 +1,34 @@
 #! /usr/bin/env python3.13
 
-chess_moves = {}
+chess_moves = {
+    'pawn': {
+        'white': ['forward 1', 'forward 2 (initial)', 'capture diagonally'],
+        'black': ['forward 1', 'forward 2 (initial)', 'capture diagonally']
+    },
+    'knight': [
+        'L-shape (2 forward, 1 left/right)',
+        'L-shape (2 backward, 1 left/right)',
+        'L-shape (2 left, 1 forward/backward)',
+        'L-shape (2 right, 1 forward/backward)'
+    ],
+    'bishop': [
+        'diagonal (any number of squares)'
+    ],
+    'rook': [
+        'horizontal (any number of squares)',
+        'vertical (any number of squares)'
+    ],
+    'queen': [
+        'horizontal (any number of squares)',
+        'vertical (any number of squares)',
+        'diagonal (any number of squares)'
+    ],
+    'king': [
+        'one square in any direction'
+    ]
+}
 
+print(chess_moves)
 
 def vaild_move(chess_board, valid_m):
     for k, v in chess_board.items():
