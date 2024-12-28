@@ -59,7 +59,7 @@ def valid_move(chess_board, piece, color=None):
         print(f"Moved to: {move}")
         return True
 
-move = valid_move(chess_moves, 'pawn', 'white')
+move = valid_move(chess_moves, 'knight', 'white')
 print(f"Valid move: {move}")
 
 
@@ -75,4 +75,4 @@ inv = {'gold coin': 42, 'rope': 1}
 dragonLoot = ['gold coin', 'dagger', 'gold coin', 'gold coin', 'ruby']
 
 inv = add_to_inventory(inv, dragonLoot)
-print(f"Updated inventory: {inv}")
+# print(f"Updated inventory: {inv}")
