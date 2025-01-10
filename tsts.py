@@ -104,7 +104,7 @@ func()
 
 # Example 12: Using regular expressions to find a pattern in a string
 def find_isbn(lst):
-    pattern = r"\b(\d{3})-(\d)-(\d{2}-(\d{6}-(\d)\b))"
+    pattern = r"\b(\d{3})-(\d)-(\d{2})-(\d{6})-(\d)\b"
     result = re.search(pattern, lst)
     if result is not None:
         return result.group(4)  # Return the 4th group if pattern matches
@@ -114,7 +114,9 @@ print(find_isbn("123-4-12-098754-0"))
 print(find_isbn("223094-AB-12-30"))
 print(find_isbn("1123-4-12-098754-0"))
 
-import time, sys
+import time
+import sys
+
 indent = 0 # How many spaces to indent.
 indentIncreasing = True # Whether the indentation is increasing or not.
 try:
@@ -132,8 +134,6 @@ try:
                 indentIncreasing = True
 except KeyboardInterrupt:
     sys.exit()
-
-import time
 
 indent = 0  # How many spaces to indent.
 indentIncreasing = True  # Whether the indentation is increasing or not.
