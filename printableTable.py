@@ -1,4 +1,4 @@
-#! /usr/bin/env python13.3
+#!/usr/bin/python3.13
 
 def printTable(tableData):
     # Initialize colWidths with 0s
