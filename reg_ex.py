@@ -13,3 +13,12 @@ pattern = r'([A-Z]+a){3,}'
 text = 'HaHaHaCaCaCaSbSbbSTaTaDaDaDab'
 query = re.search(pattern,text)
 print(query.group())
+
+
+pattern = r'\d{3}-\d{3}-\d{4}'
+text = 'Cell: 415-555-9999 Work: 212-555-0000'
+query = re.findall(pattern,text)
+print(query)
+
+
+
